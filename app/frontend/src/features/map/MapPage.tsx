@@ -5,11 +5,11 @@ import { useHistory, useLocation } from "react-router-dom";
 import Map from "../../components/Map";
 import PageTitle from "../../components/PageTitle";
 import { routeToGuide, routeToPlace, routeToUser } from "../../routes";
-import { addClusteredUsersToMap } from "./clusteredUsers";
 import addCommunitiesToMap from "./communities";
 import { MAP_PAGE } from "./constants";
 import addGuidesToMap from "./guides";
 import addPlacesToMap from "./places";
+import { addClusteredUsersToMap } from "./users";
 
 const useStyles = makeStyles((theme) => ({
   container: {
