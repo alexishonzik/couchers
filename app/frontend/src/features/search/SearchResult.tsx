@@ -3,7 +3,6 @@ import {
   CardActionArea,
   CardContent,
   Hidden,
-  makeStyles,
   Typography,
 } from "@material-ui/core";
 import { CouchIcon, LocationIcon } from "components/Icons";
@@ -20,12 +19,14 @@ import {
 import { User } from "pb/api_pb";
 import { Link } from "react-router-dom";
 import { routeToUser } from "routes";
+import makeStyles from "utils/makeStyles";
 
 const useStyles = makeStyles((theme) => ({
   about: {
     margin: `${theme.spacing(2)} 0`,
   },
   card: {
+    borderRadius: theme.shape.borderRadius * 3,
     boxShadow: "5px 5px 5px rgba(196, 196, 196, 0.5)", // todo
     paddingLeft: theme.spacing(3),
     paddingRight: theme.spacing(1),
@@ -47,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     marginBottom: theme.spacing(2),
     textDecoration: "none",
-    // width: "100%",
   },
 }));
 

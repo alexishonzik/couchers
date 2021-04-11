@@ -2,7 +2,6 @@ import {
   Checkbox,
   FormControl,
   FormControlLabel,
-  makeStyles,
   Typography,
 } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
@@ -46,6 +45,7 @@ import {
   smokingLocationLabels,
 } from "features/profile/constants";
 import useUpdateHostingPreferences from "features/profile/hooks/useUpdateHostingPreferences";
+import ProfileMarkdownInput from "features/profile/ProfileMarkdownInput";
 import ProfileTextInput from "features/profile/ProfileTextInput";
 import useCurrentUser from "features/userQueries/useCurrentUser";
 import {
@@ -55,7 +55,8 @@ import {
 } from "pb/api_pb";
 import { useState } from "react";
 import { Controller, useForm, UseFormMethods } from "react-hook-form";
-import { HostingPreferenceData } from "service/index";
+import { HostingPreferenceData } from "service";
+import makeStyles from "utils/makeStyles";
 
 interface HostingPreferenceCheckboxProps {
   className: string;
@@ -422,44 +423,36 @@ export default function HostingPreferenceForm() {
             />
           </div>
           <Typography variant="h2">{GENERAL}</Typography>
-          <ProfileTextInput
+          <ProfileMarkdownInput
             id="area"
             label={LOCAL_AREA}
             name="area"
             defaultValue={user.area?.value ?? ""}
-            inputRef={register}
-            rowsMax={5}
-            multiline
+            control={control}
             className={classes.field}
           />
-          <ProfileTextInput
+          <ProfileMarkdownInput
             id="sleepingDetails"
             label={SLEEPING_ARRANGEMENT}
             name="sleepingDetails"
             defaultValue={user.sleepingDetails?.value ?? ""}
-            inputRef={register}
-            rowsMax={5}
-            multiline
+            control={control}
             className={classes.field}
           />
-          <ProfileTextInput
+          <ProfileMarkdownInput
             id="houseRules"
             label={HOUSE_RULES}
             name="houseRules"
             defaultValue={user.houseRules?.value ?? ""}
-            inputRef={register}
-            rowsMax={5}
-            multiline
+            control={control}
             className={classes.field}
           />
-          <ProfileTextInput
+          <ProfileMarkdownInput
             id="otherHostInfo"
             label={ADDITIONAL}
             name="otherHostInfo"
             defaultValue={user.otherHostInfo?.value ?? ""}
-            inputRef={register}
-            rowsMax={5}
-            multiline
+            control={control}
             className={classes.field}
           />
           <div className={classes.buttonContainer}>
