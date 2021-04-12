@@ -41,6 +41,7 @@ export const SECTION_LABELS = {
 export const SECTION_LABELS_A11Y_TEXT = "tabs for user's details";
 
 // Edit Profile
+export const ACCOUNT_SETTINGS = "Account Settings";
 export const COUNTRIES_VISITED = "Countries I've Visited";
 export const COUNTRIES_LIVED = "Countries I've Lived In";
 export const FEMALE = "Female";
@@ -51,9 +52,9 @@ export const LANGUAGES_SPOKEN = "Languages I speak";
 export const MALE = "Male";
 export const MALE_PRONOUNS = "he / him";
 export const MEETUP_STATUS = "Meetup status";
-export const NAME = "name";
+export const NAME = "Name";
 export const PRONOUNS = "Pronouns";
-export const SAVE = "save";
+export const SAVE = "Save";
 
 // Make Request
 export const sendRequest = (name: string) => `Send ${name} a request`;
@@ -122,14 +123,20 @@ export const SEE_MORE_EVENTS_LABEL = "See more events";
 export const SEE_MORE_PLACES_LABEL = "See more places";
 
 // Bug Report
-export const BUG_DESCRIPTION = "Brief description of the bug";
-export const EXPECT = "What happened? What should have happened?";
-export const PROBLEM = "What's the problem?";
+export const BUG_DESCRIPTION_NAME = "Report title";
+export const BUG_DESCRIPTION_HELPER = "Brief description of the bug";
+export const PROBLEM_NAME = "What did you do to trigger the bug?";
+export const PROBLEM_HELPER =
+  "Brief description of the problem and how to reproduce it";
+export const EXPECT_NAME = "What happened? What should have happened?";
+export const EXPECT_HELPER =
+  "Brief description of what you expected to happen instead";
 export const REPORT = "Report a problem";
-export const STEPS = "What did you do to trigger the bug?";
 export const SUBMIT = "Submit";
 export const WARNING =
-  "Please note that this information, as well as diagnostic information including which page you are on, what browser you are using, and your user ID will be saved to a public list of bugs.";
+  "Please note that this information, as well as diagnostic information including which page you are on, what browser you are using, and your username will be saved to a public list of bugs.";
+export const BUG_REPORT_SUCCESS =
+  "Thank you for reporting that bug and making Couchers better, a report was sent to the developers! The bug ID is ";
 
 // Landing
 export const BUGS = "Bugs";
@@ -155,3 +162,11 @@ export const WELCOME_DESCRIPTION_1 = `We're in the process of building out the p
 export const WELCOME_DESCRIPTION_2 = `If you've been here before, you may have noticed that the site has changed, and that's 
   because we're migrating from our early alpha version to our new beta version. If you were on the alpha 
   version, don't worry, most of your profile data has been kept!`;
+
+// Jail
+export const PLEASE_CHECK_JAIL =
+  "Please check the following in order to continue.";
+export const LOCATION_SECTION_HEADING = "Please add your location";
+
+// Datepicker
+export const CHANGE_DATE = "Change date";
